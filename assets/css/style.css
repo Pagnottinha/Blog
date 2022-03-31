@@ -22,9 +22,13 @@ nav
     user-select: none;
 }
 
-nav a
+a
 {
     text-decoration: none;
+}
+
+nav a
+{
     text-align: center;
     color: white;
     padding: 20px;
@@ -41,23 +45,23 @@ a:hover
 main #apresentacao
 {
     background-image: url('../img/anotacao.jpg');
-    background-size: clamp(1120px, 110%, 2000px);
+    background-size: clamp(100rem, 110%, 2000rem);
     background-position: center;
     padding: 300px 50px 300px 40%;
     margin-top: 2px;
-    font-size: 3vw;
+    font-size: 4vw;
     text-align: right;
-    text-shadow: 2px 2px 2px black;
+    text-shadow: 1px 1px 0px black;
     user-select: none;
     box-shadow: 0 2px 4px black;
 }
 
 main #apresentacao h2
 {
-    font-size: 1em;
+    font-size: 1.25em;
 }
 
-.fundoBranco
+.mainCard
 {
     background-color: white;
     margin: 25px 150px 0px 150px;
@@ -147,7 +151,7 @@ p
 
 @media screen and (max-width: 675px) {
 
-    .fundoBranco
+    .mainCard
     {
         background-color: white;
         margin: 25px 0px 0px 0px;
@@ -179,4 +183,49 @@ p
         font-size: 1.5em;
     }
 
+}
+
+/* começo do style da homeLinguagens */
+
+.grid
+{
+    margin: 50px 150px 0px 150px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 300px);
+    gap: 100px;
+}
+
+.card
+{
+    background-color: white;
+    max-width: 300px;
+    align-items: center;
+    box-shadow: 1px 0 0 #005A5B, 0 1px 0 #005A5B, 0 1px 100px 2px #005A5B;
+    border-radius: 10px;
+}
+
+.linguagem
+{
+    text-align: center;
+    padding: 1.5rem;
+    transition: opacity 10s;
+}
+
+.linguagem h2
+{
+    width: 245px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.linguagem figure img
+{
+    width: 15rem;
+}
+
+.linguagem:hover figure img,
+.linguagem:hover h2
+{
+    opacity: 0.75;
 }
